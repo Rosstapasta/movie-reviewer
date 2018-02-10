@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import popcorn from './popcorn.png';
 import './App.css';
 
 class App extends Component {
@@ -7,12 +7,52 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+         
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
+
+          <h1 className="App-title">Movie Reviews</h1>
+
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
+          <img src={popcorn} className="popcorn-logo" alt="logo" />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+
+        <body class="datBod">
+          
+          <button class="buttonz">
+            <p class="buttext">Make reviews</p>
+          </button>
+
+          <button class="buttonz">
+            <p class="buttext"> Read reviews</p>
+          </button>
+
+          <button class="buttonz">
+            <p class="buttext">Edit reviews</p>
+          </button>
+
+
+        </body>
+
+
+
+        <footer class="thefoot">
+        <img src={popcorn} className="popcorn-logo" alt="logo" />
+        <img src={popcorn} className="popcorn-logo" alt="logo" />
+            <h1 id="author" class="App-title">
+              Eric Ross
+            </h1>
+            <img src={popcorn} className="popcorn-logo" alt="logo" />
+            <img src={popcorn} className="popcorn-logo" alt="logo" />
+
+
+        </footer>
+        
       </div>
     );
   }
