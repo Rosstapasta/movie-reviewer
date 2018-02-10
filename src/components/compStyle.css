@@ -1,0 +1,38 @@
+.mainLay {
+    width: 500px;
+    height: 500px;
+    background: rgb(170, 76, 76);;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+h4 {
+    color: white;
+    font-size: 2rem;
+    font-family: cursive
+}
+
+.buttonz {
+  
+    width: 200px;
+    height:50px;
+    
+  }
+  
+  .buttext {
+    font-size: 1rem;
+    font-family: cursive
+  }
+
+  .user_input {
+    width:170px;
+    height:40px;
+    font-size: 1rem;
+  }
+
+  #write_box {
+      height: 1000px;
+  }

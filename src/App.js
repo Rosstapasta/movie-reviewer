@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 import popcorn from './popcorn.png';
 import './App.css';
+import Write from './components/write';
+import Search from './components/search';
+import Edit from './components/edit';
 
 class App extends Component {
+
+  constructor(){
+    super()
+
+    this.state = {
+
+
+    }
+
+    
+  }
+
+  
+
+
   render() {
     return (
       <div className="App">
@@ -24,13 +42,9 @@ class App extends Component {
 
         <body class="datBod">
           
-          <button class="buttonz">
-            <p class="buttext">Make reviews</p>
-          </button>
+          <Search/>
 
-          <button class="buttonz">
-            <p class="buttext"> Read reviews</p>
-          </button>
+          <Write/>
 
           <button class="buttonz">
             <p class="buttext">Edit reviews</p>
