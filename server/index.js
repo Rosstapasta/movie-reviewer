@@ -10,5 +10,5 @@ app.use( express.static( __dirname + "/../public/build") );
 const url = "/api/Reviews";
 app.post( url, rec.compose )
 
-const port = 3005;
+const port = 3000;
 app.listen( port, () => { console.log(`Server listening on port ${port}`); } );

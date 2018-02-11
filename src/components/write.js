@@ -58,12 +58,14 @@ export default class Write extends Component {
 
     sendIt(){
         const { author, title, review } = this.state;
-        const newR = {author, title, review};
-        axios.post( url, { author, title, review } ).then( response => {
+        
+        axios.post( { author, title, review } ).then( response => {
             this.setState({ reviews: response.data });
           });
     
           this.setState({ author: "", title: "", review: "" });
+
+          console.log(this.state);
     }
 
 
