@@ -1,5 +1,5 @@
-var reviews = [],
-var entry = " "
+var reviews = [];
+
 
 module.exports = {
     compose: (req, res) => {

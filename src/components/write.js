@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './compStyle.css';
+import url from '../api';
 import axios from "axios";
 
 
@@ -53,13 +54,13 @@ export default class Write extends Component {
     reviewInput(val){
 
         this.setState({review: val})
-        console.log(this.state.review)
+        console.log(this.state)
     }
 
     sendIt(){
         const { author, title, review } = this.state;
         
-        axios.post( { author, title, review } ).then( response => {
+        axios.post( url, { author, title, review } ).then( response => {
             this.setState({ reviews: response.data });
           });
     
@@ -84,7 +85,7 @@ export default class Write extends Component {
                 <h4>write your review</h4>
                 <input class="user_input" onChange={(e) => this.reviewInput(e.target.value)}></input>
 
-                <button class="buttonz" onClick={ () => this.sendIt() }>
+                <button class="buttonz" onClick={ this.sendIt }>
             <p class="buttext">Compose</p>
             
           </button>
