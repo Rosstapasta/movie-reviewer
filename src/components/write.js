@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './compStyle.css';
-
+import axios from "axios";
 
 
 export default class Write extends Component {
@@ -8,13 +8,26 @@ export default class Write extends Component {
     constructor(){
         super()
         this.state = {
-        author: "",
-        title: "",
-        review: ""
+        reviews: []
 
         }
 
     }
+
+
+    componentDidMount() {
+        axios.defaults.headers.common['Access-Control-Allow-Origin'] = "*";
+        axios.get( 'http://localhost.3000/api/reviews' ).then( response => {this.setState({ reviews: response.data });
+        });
+    
+
+    }
+
+               
+
+
+
+
 
     authorInput(val){
 

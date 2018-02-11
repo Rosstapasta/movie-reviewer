@@ -3,15 +3,15 @@ import popcorn from './popcorn.png';
 import './App.css';
 import Write from './components/write';
 import Search from './components/search';
-import Edit from './components/edit';
+// import Edit from './components/edit';
 
 class App extends Component {
 
   constructor(){
     super()
-
+    
     this.state = {
-
+      reviews: []
 
     }
 
@@ -40,7 +40,7 @@ class App extends Component {
         </header>
 
 
-        <body class="datBod">
+        <div class="datBod">
           
           <Search/>
 
@@ -51,7 +51,7 @@ class App extends Component {
           </button>
 
 
-        </body>
+        </div>
 
 
 
