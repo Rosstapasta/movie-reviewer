@@ -40,14 +40,14 @@ class App extends Component {
         </header>
 
 
-        <div class="datBod">
+        <div className="datBod">
           
           <Search/>
 
           <Write/>
 
-          <button class="buttonz">
-            <p class="buttext">Edit reviews</p>
+          <button className="buttonz">
+            <p className="buttext">Edit reviews</p>
           </button>
 
 
@@ -55,10 +55,10 @@ class App extends Component {
 
 
 
-        <footer class="thefoot">
+        <footer className="thefoot">
         <img src={popcorn} className="popcorn-logo" alt="logo" />
         <img src={popcorn} className="popcorn-logo" alt="logo" />
-            <h1 id="author" class="App-title">
+            <h1 id="author" className="App-title">
               Eric Ross
             </h1>
             <img src={popcorn} className="popcorn-logo" alt="logo" />

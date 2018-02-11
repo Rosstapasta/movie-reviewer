@@ -2,6 +2,7 @@
   "name": "movie-reviewer",
   "version": "0.1.0",
   "private": true,
+  "main": "./src/server/index.js",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
@@ -10,15 +11,15 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
   },
-
-  "devDependencies": {
-    "react-scripts": "1.0.7"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3000",
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './compStyle.css';
-import url from '../api';
 import axios from "axios";
 
 
@@ -10,9 +9,9 @@ export default class Write extends Component {
         super()
         this.state = {
             reviews: [],
-            author: " ",
-            title: " ",
-            review: " "
+            author: "",
+            title: "",
+            review: ""
 
         }
 
@@ -26,7 +25,7 @@ export default class Write extends Component {
 
     componentDidMount() {
         axios.defaults.headers.common['Access-Control-Allow-Origin'] = "*";
-        axios.get( 'http://localhost.3000/api/reviews' ).then( response => {this.setState({ reviews: response.data });
+        axios.get( 'localhost:3000/api/reviews' ).then( response => {this.setState({ reviews: response.data });
         });
     
 
@@ -58,35 +57,33 @@ export default class Write extends Component {
     }
 
     sendIt(){
-        const { author, title, review } = this.state;
         
-        axios.post( url, { author, title, review } ).then( response => {
-            this.setState({ reviews: response.data });
-          });
-    
-          this.setState({ author: "", title: "", review: "" });
+          axios.post('/api/reviews', {
+              author: this.state.author,
+                title: this.state.title,
+                review: this.state.review }).then( (res) => console.log(res.data));
 
-          console.log(this.state);
+                console.log(this.state);
     }
 
 
     render(){
         return(
-            <div id="write_box" class="mainLay"> 
+            <div id="write_box" className="mainLay"> 
                 <h4>Write a reveiw</h4>
 
                 <h4>Author</h4>
-                <input class="user_input" onChange={(e) => this.authorInput(e.target.value)}></input>
+                <input className="user_input" onChange={(e) => this.authorInput(e.target.value)}></input>
 
                 <h4>Movie title</h4>
-                <input class="user_input" onChange={(e) =>
+                <input className="user_input" onChange={(e) =>
                 this.titleInput(e.target.value)}></input>
 
                 <h4>write your review</h4>
-                <input class="user_input" onChange={(e) => this.reviewInput(e.target.value)}></input>
+                <input className="user_input" onChange={(e) => this.reviewInput(e.target.value)}></input>
 
-                <button class="buttonz" onClick={ this.sendIt }>
-            <p class="buttext">Compose</p>
+                <button className="buttonz" onClick={ this.sendIt }>
+            <p className="buttext">Compose</p>
             
           </button>
                     

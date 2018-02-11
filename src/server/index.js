@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const rec = require( _dirname +'/controllers/review_controller.js')
+const rec = require( './controllers/review_controller')
 
 const app = express();
 
 app.use( bodyParser.json() );
-app.use( express.static( __dirname + "/../public/build") );
+app.use( express.static( __dirname + 'src') );
 
-const url = "/api/Reviews";
+const url = '/api/reviews';
 app.post( url, rec.compose )
 
 const port = 3000;

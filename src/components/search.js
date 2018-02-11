@@ -24,9 +24,9 @@ export default class Search extends Component {
         return(
             <div class="mainLay"> 
                 <h4>Search by title</h4>
-                <input class="user_input" onChange={(e) => this.titleInput(e.target.value)}></input> 
+                <input className="user_input" onChange={(e) => this.titleInput(e.target.value)}></input> 
 
-                <button class="buttonz">
+                <button className="buttonz">
             <p class="buttext">FIND</p>
           </button>
             </div>
