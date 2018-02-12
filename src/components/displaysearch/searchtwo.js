@@ -6,7 +6,7 @@ export default class Searchtwo extends Component {
 
     constructor(props){
         super(props)
-        returnReview: this.props
+        returnReview: this.props.returnReview
 
     }
 
@@ -22,7 +22,7 @@ export default class Searchtwo extends Component {
         const { returnReview } = this.props;
         return(
             <div>
-                <span className="return">{ returnReview }</span>
+                <span className="return">{ JSON.stringify(returnReview) }</span>
             </div>
 
         )

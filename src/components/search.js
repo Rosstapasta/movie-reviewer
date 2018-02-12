@@ -14,6 +14,8 @@ export default class Search extends Component {
         author: "",
         returnReview: [],
         reviews: [],
+    
+        
         
 
         }
@@ -37,7 +39,7 @@ export default class Search extends Component {
     titleInput(val){
     
         this.setState({title: val});
-        console.log(this.state.title)
+        // console.log(this.state.title)
 
     }
 
@@ -47,7 +49,7 @@ export default class Search extends Component {
 
     searchByTitle(){
         axios.get(`api/reviews?title=${this.state.title}`).then( (res) => this.setState({ returnReview: res.data }))
-        console.log(this.state.returnReview)
+       
 
         
     }
@@ -56,7 +58,6 @@ export default class Search extends Component {
 
 
     render(){
-    
         
         return(
     
@@ -71,7 +72,8 @@ export default class Search extends Component {
           </button> 
 
           <div>
-
+                {JSON.stringify(this.state.returnReview[0])}
+    
                 <Searchtwo /> 
 
           </div>
