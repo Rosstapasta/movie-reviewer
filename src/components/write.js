@@ -23,13 +23,13 @@ export default class Write extends Component {
     }
 
 
-    componentDidMount() {
-        axios.defaults.headers.common['Access-Control-Allow-Origin'] = "*";
-        axios.get( 'localhost:3000/api/reviews' ).then( response => {this.setState({ reviews: response.data });
-        });
+    // componentDidMount() {
+    //     axios.defaults.headers.common['Access-Control-Allow-Origin'] = "*";
+    //     axios.get( '/api/reviews' ).then( response => {this.setState({ reviews: response.data });
+    //     });
     
 
-    }
+    // }
 
                
 
@@ -40,14 +40,14 @@ export default class Write extends Component {
     authorInput(val){
 
         this.setState({author: val});
-        // console.log(this.state)
+        
         
     }
 
     titleInput(val){
 
         this.setState({title: val});
-        // console.log(this.state)
+        
     }
 
     reviewInput(val){
@@ -63,11 +63,12 @@ export default class Write extends Component {
                 title: this.state.title,
                 review: this.state.review }).then( (res) => console.log(res.data));
 
-                // console.log(this.state);
+            
     }
 
 
     render(){
+        console.log(this.state, 'write')
         return(
             <div id="write_box" className="mainLay"> 
                 <h4>Write a reveiw</h4>
@@ -82,7 +83,7 @@ export default class Write extends Component {
                 <h4>write your review</h4>
                 <input className="user_input" onChange={(e) => this.reviewInput(e.target.value)}></input>
 
-                <button className="buttonz" onClick={ this.sendIt }>
+                <button className="buttonz" onClick={ () => {this.sendIt() }}>
             <p className="buttext">Compose</p>
             
           </button>

@@ -1,7 +1,9 @@
 .mainLay {
     width: 500px;
     height: 500px;
-    background: rgb(170, 76, 76);;
+    background: rgb(170, 76, 76);
+    box-shadow: 10px 10px 8px #221d1d;;
+    border-radius: 25px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -12,25 +14,29 @@
 h4 {
     color: white;
     font-size: 2rem;
-    font-family: cursive
+    font-family: cursive;
 }
 
 .buttonz {
   
     width: 200px;
     height:50px;
+    box-shadow: 5px 7px 8px #070101;;
+    border-radius: 25px;
     
   }
   
   .buttext {
     font-size: 1rem;
-    font-family: cursive
+    font-family: cursive;
   }
 
   .user_input {
     width:170px;
     height:40px;
     font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 7px 8px #070101;
   }
 
   #write_box {
@@ -39,4 +45,24 @@ h4 {
 
   #search_box {
       height: 1000px;
+  }
+
+  .requested_review {
+      background-color: white;
+      height: 300px;
+      width: 300px;
+      box-shadow: 5px 7px 8px #070101;;
+      border-radius: 25px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+
+  }
+
+  .label {
+      font-size: 1rem;
+      font-family: cursive;
   }

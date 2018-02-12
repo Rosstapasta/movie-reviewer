@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './compStyle.css';
 import axios from "axios";
-import Searchtwo from './displaysearch/searchtwo.js';
+
 
 
 
@@ -23,24 +23,23 @@ export default class Search extends Component {
         this.titleInput = this.titleInput.bind(this);
         this.searchByTitle = this.searchByTitle.bind(this);
         this.authorInput = this.authorInput.bind(this);
-        // this.searchByAuthor = this.searchByAuthor.bind(this);
+        
 
 
     }
 
-    componentDidMount() {
-        axios.defaults.headers.common['Access-Control-Allow-Origin'] = "*";
-        axios.get( 'localhost:3000/api/reviews' ).then( response => {this.setState({ reviews: response.data });
-        });
+    // componentDidMount() {
+    //     axios.defaults.headers.common['Access-Control-Allow-Origin'] = "*";
+    //     axios.get( '/api/2/reviews' ).then( response => {this.setState({ reviews: response.data });
+    //     });
     
 
-    }
+    // }
 
     titleInput(val){
     
         this.setState({title: val});
-        // console.log(this.state.title)
-
+        
     }
 
     authorInput(val){
@@ -48,7 +47,7 @@ export default class Search extends Component {
     }
 
     searchByTitle(){
-        axios.get(`api/reviews?title=${this.state.title}`).then( (res) => this.setState({ returnReview: res.data }))
+        axios.get(`/api/reviews?title=${this.state.title}`).then( (res) => this.setState({ returnReview: res.data }))
        
 
         
@@ -58,25 +57,31 @@ export default class Search extends Component {
 
 
     render(){
-        
+        // console.log(this.state)
         return(
     
-            <div id="search_box" class="mainLay"> 
+            <div id="search_box" className="mainLay"> 
 
                 <h4>Search by title</h4>
                 <input className="user_input" onChange={(e) => this.titleInput(e.target.value)}></input> 
 
-                <button className="buttonz" onClick={ this.searchByTitle }>
-            <p className="buttext">FIND</p>
+                <button className="buttonz" onClick={ () => { this.searchByTitle() }}>
+                <p className="buttext">FIND</p>
             
-          </button> 
+                </button> 
 
-          <div>
-                {JSON.stringify(this.state.returnReview[0])}
-    
-                <Searchtwo /> 
+                <div className="requested_review">
+                    <p className="label">Author</p>
+                        { this.state.returnReview[0] ?
+                        <div> 
+                        {this.state.returnReview[0].author} </div> : null}
+                    <p className="label">Review</p>
+                        { this.state.returnReview[0] ?
+                        <div>{this.state.returnReview[0].review} 
+                        </div> : null}
+                    
 
-          </div>
+                </div>
 
 
 
