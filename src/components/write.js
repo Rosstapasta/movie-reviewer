@@ -40,20 +40,20 @@ export default class Write extends Component {
     authorInput(val){
 
         this.setState({author: val});
-        console.log(this.state)
+        // console.log(this.state)
         
     }
 
     titleInput(val){
 
         this.setState({title: val});
-        console.log(this.state)
+        // console.log(this.state)
     }
 
     reviewInput(val){
 
         this.setState({review: val})
-        console.log(this.state)
+        
     }
 
     sendIt(){
@@ -63,7 +63,7 @@ export default class Write extends Component {
                 title: this.state.title,
                 review: this.state.review }).then( (res) => console.log(res.data));
 
-                console.log(this.state);
+                // console.log(this.state);
     }
 
 
