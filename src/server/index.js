@@ -11,7 +11,8 @@ const url = '/api/reviews';
 app.post( url, rec.compose );
 app.get( url, rec.searchtitle );
 app.delete(url, rec.delete);
-// app.get( '/api/reviews/2')
+app.put(url, rec.update);
+
 
 const port = 3030;
 app.listen( port, () => { console.log(`Server listening on port ${port}`); } );

@@ -19,6 +19,7 @@ export default class Write extends Component {
         this.titleInput = this.titleInput.bind(this);
         this.reviewInput = this.reviewInput.bind(this);
         this.sendIt = this.sendIt.bind(this);
+        this.update = this.update.bind(this);
 
     }
 
@@ -67,6 +68,20 @@ export default class Write extends Component {
     }
 
 
+    update(){
+        
+        axios.put('/api/reviews', {
+            author: this.state.author,
+            title: this.state.title,
+            review: this.state.review
+        }).then( (res) => console.log(res.data));
+       
+
+        
+    }
+
+
+
     render(){
         console.log(this.state, 'write')
         return(
@@ -87,6 +102,12 @@ export default class Write extends Component {
 
                     <button className="buttonz" onClick={ () => {this.sendIt() }}>
                     <p className="buttext">Compose</p>
+
+                        </button>
+
+                    <button className="buttonz" onClick={ () => {this.update() }}>
+                    <p className="buttext">Update</p>
+
                 
                     </button>
                     

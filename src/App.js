@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import popcorn from './popcorn.png';
 import './App.css';
 import Write from './components/write';
 import Search from './components/search';

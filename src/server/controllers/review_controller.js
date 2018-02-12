@@ -22,6 +22,23 @@ module.exports = {
         reviews.splice(findReview, 1);
         console.log(reviews)
         res.status(200).send();
+    },
+
+    update: (req, res) => {
+        for(let i=0; i<reviews.length; i++){
+            if( reviews[i].author === req.body.author ){
+                reviews[i].title = req.body.title;
+                reviews[i].review = req.body.review;
+
+                return res.status(200).send(reviews)
+            }
+
+        }
+
+
+        // let findReview = reviews.findIndex( e => e.author == req.query.author)
+        // reviews[findreview] = {author:,title:,review:}
+        
     }
 
     
