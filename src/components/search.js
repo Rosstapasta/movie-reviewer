@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './compStyle.css';
 import axios from "axios";
+import Searchtwo from './displaysearch/searchtwo.js';
 
 
 
@@ -55,7 +56,7 @@ export default class Search extends Component {
 
 
     render(){
-        const { reviews } = this.state;
+    
         
         return(
     
@@ -68,6 +69,13 @@ export default class Search extends Component {
             <p className="buttext">FIND</p>
             
           </button> 
+
+          <div>
+
+                <Searchtwo /> 
+
+          </div>
+
 
 
 
