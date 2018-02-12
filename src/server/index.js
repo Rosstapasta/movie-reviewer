@@ -10,6 +10,7 @@ app.use( express.static( __dirname + 'src') );
 const url = '/api/reviews';
 app.post( url, rec.compose );
 app.get( url, rec.searchtitle );
+app.delete(url, rec.delete);
 // app.get( '/api/reviews/2')
 
 const port = 3030;

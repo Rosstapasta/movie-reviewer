@@ -3,7 +3,10 @@ import popcorn from './popcorn.png';
 import './App.css';
 import Write from './components/write';
 import Search from './components/search';
-// import Edit from './components/edit';
+import lotr from './lotr.jpg';
+import bob from './bob.jpg';
+import Popcorn from './components/popcornicon';
+
 
 class App extends Component {
 
@@ -25,44 +28,52 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-         
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
+            <Popcorn/>
+            <Popcorn/>
+            <Popcorn/>
+            <Popcorn/>
 
           <h1 className="App-title">Movie Reviews</h1>
 
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
-          <img src={popcorn} className="popcorn-logo" alt="logo" />
+            <Popcorn/>
+            <Popcorn/>
+            <Popcorn/>
+            <Popcorn/>
         </header>
 
 
         <div className="datBod">
+
           
-          <Search/>
+          
+            <div className="picture_and_create">
+              <Search/>
+            
+              <img src={bob} className="lotr" />
+            </div>
 
-          <Write/>
+            <div className="picture_and_create">
+                <img src={lotr} className="lotr" />
 
-          <button className="buttonz">
-            <p className="buttext">Edit reviews</p>
-          </button>
-
+              <Write/>
+            </div>
 
         </div>
 
 
 
         <footer className="thefoot">
-        <img src={popcorn} className="popcorn-logo" alt="logo" />
-        <img src={popcorn} className="popcorn-logo" alt="logo" />
+       
+            <Popcorn/>
+            <Popcorn/>
+
+
             <h1 id="author" className="App-title">
               Eric Ross
             </h1>
-            <img src={popcorn} className="popcorn-logo" alt="logo" />
-            <img src={popcorn} className="popcorn-logo" alt="logo" />
+           
+            <Popcorn/>
+            <Popcorn/>
 
 
         </footer>

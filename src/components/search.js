@@ -23,6 +23,7 @@ export default class Search extends Component {
         this.titleInput = this.titleInput.bind(this);
         this.searchByTitle = this.searchByTitle.bind(this);
         this.authorInput = this.authorInput.bind(this);
+        this.deleteReview =this.deleteReview.bind(this)
         
 
 
@@ -51,6 +52,12 @@ export default class Search extends Component {
        
 
         
+    }
+
+    deleteReview(){
+        console.log("button hit")
+        axios.delete(`/api/reviews?title=${this.state.title}`).then( (res) => 
+    this.setState({returnReview: res.data}))
     }
 
 
@@ -82,6 +89,10 @@ export default class Search extends Component {
                     
 
                 </div>
+                <button className="buttonz" onClick={() => this.deleteReview()}>
+
+                <p className="buttext">Delete this review</p>
+                </button>
 
 
 

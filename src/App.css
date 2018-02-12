@@ -8,6 +8,16 @@
 
 }
 
+.lotr {
+  display: block;
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  box-shadow: 5px 7px 8px #070101;;
+  border-radius: 25px;
+}
+
 .App-header {
   background-color: rgb(170, 76, 76);
   height: 170px;
@@ -32,13 +42,14 @@
 }
 
 .datBod {
-  height: 2500px;
+  height: 2000px;
   padding: 20px;
   background: rgb(248, 237, 141);
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
+  
   
 }
 
@@ -68,6 +79,12 @@
   flex-direction: row;
   justify-content: space-around;
 
+}
+
+.picture_and_create {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 
